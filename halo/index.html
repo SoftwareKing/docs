@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+      .scenarios ul li.logo {
+          width: 50% !important;
+          text-align: center;
+      }
+
+      .scenarios ul li.logo p {
+          color: #000000;
+          line-height: 60px;
+      }
+      .scenarios .contents {
+          height: 900px;
+          width: 100%;
+      }
+
+      .scenarios ul li {
+          height: 300px;
+          width: 25%;
+          display: inline-block;
+          float: left;
+          background-size: cover;
+          position: relative;
+      }
+
+      .scenarios ul li p {
+          font-size: 20px;
+          color: #ffffff;
+          text-align: center;
+          line-height: 300px;
+      }
+      .scenarios .logo {
+          background: #fff;
+      }
+
+      .scenarios .logo .container {
+          display: flex;
+          flex-direction: row;
+      }
+
+      .scenarios .logo .container div:first-child(1) {
+          background-color: #ccffcc;
+          flex: 1;
+          height: 100px;
+          width: 100px;
+          text-align: center;
+      }
+
+      .scenarios .logo .second {
+          -webkit-flex: 2;
+          flex: 2;
+      }
+      .scenarios .logo p {
+          z-index: 999;
+          margin-left: -5px;
+          font-size: 36px;
+          margin-top: -26px;
+          color: #fff !important;
+          paddig: 0px;
+          position: relative;
+          -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+          -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+          animation: neon2 1.5s ease-in-out infinite alternate;
+          text-shadow: 0 0 15px #ff6a00;
+          width: 180px;
+      }
+
+      .scenarios .logo #loader-wrapper {
+          position: relative;
+          top: 66px;
+          left: 40%;
+          width: 260px;
+          height: 260px;
+          /* margin-left: 30px; */
+          /* margin: auto; */
+      }
+
+      .scenarios .logo #loader {
+          display: block;
+          position: relative;
+          left: 50%;
+          top: 50%;
+          width: 100%;
+          height: 100%;
+          margin: -175px 0 0 -175px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-top-color: #ff6a00;
+          border-bottom-color: #ff6a00;
+          border-right-color: #ff6a00;
+          border-left-color: #ff6a00;
+          box-shadow: 0 0 15px #ff6a00;
+
+          -webkit-animation: spin 30s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 30s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+      }
+
+      .scenarios .logo #loader1:before {
+          content: "";
+          position: absolute;
+          top: 70px;
+          left: 70px;
+          right: 70px;
+          bottom: 70px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-color: #ff6a00;
+          background-color: #ff6a00;
+          border-style: dotted;
+
+          -webkit-animation: spin 18s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 18s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+      }
+
+      .scenarios .logo #loader1:after {
+          content: "";
+          position: absolute;
+          top: 55px;
+          left: 55px;
+          right: 55px;
+          bottom: 55px;
+          border-radius: 50%;
+          border-color: #ff6022;
+          border-width: 5px;
+          border-style: double dashed solid dotted;
+          box-shadow: 0 0 40px #ff6a00;
+          -webkit-animation: spin 60s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 60s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+      }
+
+      .scenarios .logo #loader:before {
+          content: "";
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          right: 15px;
+          bottom: 15px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-color: #ff6022;
+
+          border-style: dotted;
+
+          -webkit-animation: spin 18s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 18s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+      }
+
+      .scenarios .logo #loader:after {
+          content: "";
+          position: absolute;
+          top: 25px;
+          left: 25px;
+          right: 25px;
+          bottom: 25px;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          border-color: #ff6022;
+          border-width: 5px;
+          border-style: dotted solid;
+          -webkit-animation: spin 60s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 60s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+      }
+
+      @-webkit-keyframes spin {
+          0% {
+              -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+              -ms-transform: rotate(0deg); /* IE 9 */
+              transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+          }
+          100% {
+              -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+              -ms-transform: rotate(360deg); /* IE 9 */
+              transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+          }
+      }
+
+      @keyframes spin {
+          0% {
+              -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+              -ms-transform: rotate(0deg); /* IE 9 */
+              transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+          }
+          100% {
+              -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+              -ms-transform: rotate(360deg); /* IE 9 */
+              transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+          }
+      }
+
+      @-webkit-keyframes neon2 {
+          from {
+              text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff6a00, 0 0 70px #ff6a00, 0 0 80px #ff6a00, 0 0 100px #ff6a00, 0 0 150px #ff6a00;
+          }
+          to {
+              text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff6a00, 0 0 35px #ff6a00, 0 0 40px #ff6a00, 0 0 50px #ff6a00, 0 0 75px #ff6a00;
+          }
+      }
+    </style>
+</head>
+<body>
+<div class="scenarios public">
+    <div class="contents">
+        <ul>
+            <li class="logo">
+                <div class="second">
+                    <div id="loader-wrapper">
+                        <div id="loader">
+                            <div id="loader1">
+                            </div>
+                        </div>
+                        <p>Halo</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+</body></html>
